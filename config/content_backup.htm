@@ -12,3 +12,40 @@
 <h1>Develop</h1>
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
+<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h1>SSH</h1>
+<p>先下載 <a href="http://mde.tw/cp2019/content/USB%20%E7%A8%8B%E5%BC%8F%E7%B3%BB%E7%B5%B1.html">putty</a>  , 放到可攜系統的 data 目錄底下</p>
+<p>執行 putty ,</p>
+<p></p><h1>Solvespace</h1>
+<h4>Solvespace 編譯</h4>
+<p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">re sh.exe sh_rename_for_solvespace.exe</pre>
+<p><span>*p.s.  re 是重新命名的指令</span></p>
+<p><span>git version 查驗 git 版本 ( 需要git 2.13 版本以上 )</span></p>
+<p><span>git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</span></p>
+<p>*p.s. <span>使用  git clone </span><span>--recurse-submodules 取得所有子模組資料，clone 前請先確認</span></p>
+<p><span>是否有重複檔名的資料，並耐心等候取得資料，以確保檔案完整性</span></p>
+<p style="padding-left: 30px;">上述指令同:</p>
+<p style="padding-left: 60px;">git clone <span><a href="https://github.com/solvespace/solvespace.git">https://github.com/solvespace/solvespace.git</a> </span></p>
+<p style="padding-left: 60px;"><span>cd solvespace</span></p>
+<p style="padding-left: 60px;"><span>git submodule init</span></p>
+<p style="padding-left: 60px;"><span>git submodule update</span></p>
+<p><span>編輯 Y:\tmp\solvespace\extlib\angle\CMakeLists.txt 將 713 行和 714行註解掉，像底下這樣</span></p>
+<p><span>#list(APPEND ANGLE_DEFINITIONS<br/><span>#"-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")</span><br/><span>endif()</span></span></p>
+<p>*p.s.  漏掉此步驟，否則後續編譯會有錯誤</p>
+<p>到 <span>Y:\tmp\solvespace\extlib\libpng 目錄底下新建名為 build目錄</span></p>
+<p>cd solvespace </p>
+<p>cd extlib</p>
+<p>cd libpng</p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
+<p>mingw32-make</p>
+<p><span><span>重新命名 Y:\tmp\solvespace\extlib\libpng\build\libpng.dll.a 改名為 libpng_static.a 並且複製到 Y:\msys64\mingw64\lib</span></span></p>
+<p><span><span>回到 Y:\tmp\solvespace 目錄下新建名為 build目錄</span></span></p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
+<p>mingw32-make</p>
+<p>完成以上編譯後執行 <span>Y:</span>tmp\solvespace\build\bin\solvespace.exe   ，若能成功執行就能確定完成 Solvespace 編譯</p>
+<p></p>

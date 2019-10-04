@@ -149,18 +149,39 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">SSH << <a href='SSH.html'>Previous</a> <br /><h1>Solvespace</h1>
+<h4>Solvespace 編譯</h4>
+<p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe</p>
+<p>re sh.exe sh_rename_for_solvespace.exe</p>
+<p><span>*p.s.  re 是重新命名的指令</span></p>
+<p><span>git version 查驗 git 版本 ( 需要git 2.13 版本以上 )</span></p>
+<p><span>git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</span></p>
+<p>*p.s. <span>使用  git clone </span><span>--recurse-submodules 取得所有子模組資料，clone 前請先確認</span></p>
+<p><span>是否有重複檔名的資料，並耐心等候取得資料，以確保檔案完整性</span></p>
+<p style="padding-left: 30px;">上述指令同:</p>
+<p style="padding-left: 60px;">git clone <span><a href="https://github.com/solvespace/solvespace.git">https://github.com/solvespace/solvespace.git</a> </span></p>
+<p style="padding-left: 60px;"><span>cd solvespace</span></p>
+<p style="padding-left: 60px;"><span>git submodule init</span></p>
+<p style="padding-left: 60px;"><span>git submodule update</span></p>
+<p><span>編輯 Y:\tmp\solvespace\extlib\angle\CMakeLists.txt 將 713 行和 714行註解掉，像底下這樣</span></p>
+<p><span>#list(APPEND ANGLE_DEFINITIONS<br/><span>#"-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")</span><br/><span>endif()</span></span></p>
+<p>*p.s.  漏掉此步驟，否則後續編譯會有錯誤</p>
+<p>到 <span>Y:\tmp\solvespace\extlib\libpng 目錄底下新建名為 build目錄</span></p>
+<p>cd solvespace </p>
+<p>cd extlib</p>
+<p>cd libpng</p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
+<p>mingw32-make</p>
+<p><span><span>重新命名 Y:\tmp\solvespace\extlib\libpng\build\libpng.dll.a 改名為 libpng_static.a 並且複製到 Y:\msys64\mingw64\lib</span></span></p>
+<p><span><span>回到 Y:\tmp\solvespace 目錄下新建名為 build目錄</span></span></p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
+<p>mingw32-make</p>
+<p>完成以上編譯後執行 <span>Y:</span>tmp\solvespace\build\bin\solvespace.exe   ，若能成功執行就能確定完成 Solvespace 編譯</p>
+<p></p><br />SSH << <a href='SSH.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
