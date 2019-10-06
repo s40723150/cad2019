@@ -14,12 +14,53 @@
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
 <h1>SSH</h1>
+<h4>批次檔設定</h4>
+<p>執行隨身碟 SciTE.exe ( 位於 201906_fall\data\wscite415\wscite 目錄下 )</p>
+<p style="margin: 0in; font-size: 11.0pt;"><span lang="zh-TW" style="font-family: 'Microsoft JhengHei';">開啟</span><span lang="zh-TW" style="font-family: 'Microsoft JhengHei';"><span face="Calibri" style="font-family: Calibri;"> start_mdecourse.bat 並加入</span></span></p>
+<p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"> </p>
+<p lang="x-none" style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;">REM for putty</p>
+<p lang="x-none" style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;">Set GIT_HOME=%Cdisk%:\portablegit\bin\</p>
+<p lang="x-none" style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;">Set GIT_SSH=%Disk%:\putty\plink.exe</p>
+<h4>SSH 設定</h4>
+<p style="margin: 0in; font-family: 'Microsoft JhengHei'; font-size: 11.0pt;"><span lang="zh-TW">到 </span><span lang="en-US">.ssh </span><span lang="zh-TW">的目錄下</span></p>
+<p style="margin: 0in; font-family: 'Microsoft JhengHei'; font-size: 11.0pt;"><span lang="zh-TW"></span><span lang="x-none" style="font-family: Calibri;"><span face="Microsoft JhengHei" style="font-family: 'Microsoft JhengHei';">編輯 </span></span><span lang="x-none" style="font-family: Calibri;">config,插入</span></p>
+<p style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;"><span lang="en-US" style="font-family: 'Microsoft JhengHei';">P</span><span lang="x-none" style="font-family: Calibri;">roxy Command y:/putty/plink.exe github.com %h %p</span></p>
+<p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"><span lang="x-none" style="font-family: Calibri;">並註解掉</span></p>
+<p style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;"><span lang="x-none" style="font-family: Calibri;">IdentityFile "y:\home_mdecourse\.ssh\id_rsa"</span></p>
+<p><span lang="x-none" style="font-family: Calibri;"><img caption="false" height="139" src="/images/SciTE_ssh_config.png" width="400"/></span></p>
+<h4>設定 SSH key 的使用配置 ( 使用 Ipv 6 網路 )</h4>
 <p>先下載 <a href="http://mde.tw/cp2019/content/USB%20%E7%A8%8B%E5%BC%8F%E7%B3%BB%E7%B5%B1.html">putty</a>  , 放到可攜系統的 data 目錄底下</p>
-<p>執行 putty ,</p>
-<p></p><h1>Solvespace</h1>
+<h4>Key 轉換 ( 此設定方法是拿先前的 <span>Open SSH key</span> )</h4>
+<p>先建立一個 key ( 若之前已經有 Open SSH 的 key 就可以直接用那把 key )</p>
+<p>執行 puttygen.exe </p>
+<p>載入一個 <span>Open SSH 的 key</span></p>
+<p><img alt="" height="400" src="/images/puttygen_loadkey.png" width="398"/></p>
+<p>*p.s.  若是使用之前的 key , bits 數請寄的設定為 4096 , 轉換成的類型請設定成 rsa </p>
+<p>轉存成 rsa 的 prviate key ( ppk檔 )</p>
+<p><img alt="" height="400" src="/images/puttygen_privatekey.png" width="398"/></p>
+<h4>Putty 設定</h4>
+<p>執行 putty.exe</p>
+<p>建立一個 session 叫 github.com</p>
+<p style="padding-left: 30px;">Host Name : github.com</p>
+<p style="padding-left: 30px;">Port : 22</p>
+<p style="padding-left: 30px;">Connection type : SSH</p>
+<p><img alt="" height="400" src="/images/putty_set_session.png" width="401"/></p>
+<p>設定 proxy </p>
+<p style="padding-left: 30px;">Proxy type : HTTP</p>
+<p style="padding-left: 30px;"><span>Proxy hostname :  [2001:288:6004:17::7]     Port : 3128</span></p>
+<p style="padding-left: 30px;">Do DNS name lookup at proxy end :  Auto</p>
+<p style="padding-left: 30px;">Username :  kmolab</p>
+<p style="padding-left: 30px;">Password : kmolab</p>
+<p><img alt="" height="400" src="/images/putty_set_proxy.png" width="401"/></p>
+<p>設定 SSH 底下的 Auth</p>
+<p><span lang="x-none" style="font-family: Calibri;">Private key file for authentication :  </span><span lang="en-US" style="font-family: 'Microsoft JhengHei';">( 請指定 rsa-</span><span lang="x-none" style="font-family: Calibri;">key </span><span lang="zh-TW" style="font-family: 'Microsoft JhengHei';">的位置 </span><span lang="en-US" style="font-family: 'Microsoft JhengHei';">)</span></p>
+<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';"><img alt="" height="400" src="/images/putty_set_ssh_auth.png" width="401"/></span></p>
+<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';">*p.s.  需指定 ppk 檔</span></p>
+<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';">儲存 session 設定</span></p>
+<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';"><img alt="" height="400" src="/images/putty_save.png" width="401"/></span></p><h1>Solvespace</h1>
 <h4>Solvespace 編譯</h4>
 <p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">re sh.exe sh_rename_for_solvespace.exe</pre>
+<p>re sh.exe sh_rename_for_solvespace.exe</p>
 <p><span>*p.s.  re 是重新命名的指令</span></p>
 <p><span>git version 查驗 git 版本 ( 需要git 2.13 版本以上 )</span></p>
 <p><span>git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</span></p>
