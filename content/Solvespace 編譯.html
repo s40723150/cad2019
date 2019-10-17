@@ -149,8 +149,38 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">SSH << <a href='SSH.html'>Previous</a> <a href='Solvespace 編譯.html'>Next</a> >> Solvespace 編譯<br /><h1>Solvespace</h1>
-<br />SSH << <a href='SSH.html'>Previous</a> <a href='Solvespace 編譯.html'>Next</a> >> Solvespace 編譯</div>
+    <div id="tipue_search_content">Solvespace << <a href='Solvespace.html'>Previous</a> <a href='Solvespace 操作.html'>Next</a> >> Solvespace 操作<br /><h1>Solvespace 編譯</h1>
+<p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe</p>
+<p>re sh.exe sh_rename_for_solvespace.exe</p>
+<p><span>*p.s.  re 是重新命名的指令</span></p>
+<p><span>git version 查驗 git 版本 ( 需要git 2.13 版本以上 )</span></p>
+<p><span>git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</span></p>
+<p>*p.s. <span>使用  git clone </span><span>--recurse-submodules 取得所有子模組資料，clone 前請先確認</span></p>
+<p><span>是否有重複檔名的資料，並耐心等候取得資料，以確保檔案完整性</span></p>
+<p style="padding-left: 30px;">上述指令同:</p>
+<p style="padding-left: 60px;">git clone <span><a href="https://github.com/solvespace/solvespace.git">https://github.com/solvespace/solvespace.git</a> </span></p>
+<p style="padding-left: 60px;"><span>cd solvespace</span></p>
+<p style="padding-left: 60px;"><span>git submodule init</span></p>
+<p style="padding-left: 60px;"><span>git submodule update</span></p>
+<p><span>編輯 Y:\tmp\solvespace\extlib\angle\CMakeLists.txt 將 713 行和 714行註解掉，像底下這樣</span></p>
+<p><span>#list(APPEND ANGLE_DEFINITIONS<br/><span>#"-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")</span><br/><span>endif()</span></span></p>
+<p>*p.s.  漏掉此步驟，否則後續編譯會有錯誤</p>
+<p>到 <span>Y:\tmp\solvespace\extlib\libpng 目錄底下新建名為 build目錄</span></p>
+<p>cd solvespace </p>
+<p>cd extlib</p>
+<p>cd libpng</p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
+<p>mingw32-make</p>
+<p><span><span>重新命名 Y:\tmp\solvespace\extlib\libpng\build\libpng.dll.a 改名為 libpng_static.a 並且複製到 Y:\msys64\mingw64\lib</span></span></p>
+<p><span><span>回到 Y:\tmp\solvespace 目錄下新建名為 build目錄</span></span></p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</p>
+<p>mingw32-make</p>
+<p>完成以上編譯後執行 <span>Y:</span>tmp\solvespace\build\bin\solvespace.exe   ，若能成功執行就能確定完成 Solvespace 編譯</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/XmXqpvr044I" width="560"></iframe></p><br />Solvespace << <a href='Solvespace.html'>Previous</a> <a href='Solvespace 操作.html'>Next</a> >> Solvespace 操作</div>
         
     <!-- footer -->
       <div class="container">
