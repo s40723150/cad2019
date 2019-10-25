@@ -9,25 +9,20 @@
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>SSH</h1>
+<h2>SSH</h2>
 <h4>批次檔設定</h4>
 <p>執行隨身碟 SciTE.exe ( 位於 201906_fall\data\wscite415\wscite 目錄下 )</p>
-<p style="margin: 0in; font-size: 11.0pt;"><span lang="zh-TW" style="font-family: 'Microsoft JhengHei';">開啟</span><span lang="zh-TW" style="font-family: 'Microsoft JhengHei';"><span face="Calibri" style="font-family: Calibri;"> start_mdecourse.bat 並加入</span></span></p>
-<p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"> </p>
-<p lang="x-none" style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;">REM for putty</p>
-<p lang="x-none" style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;">Set GIT_HOME=%Cdisk%:\portablegit\bin\</p>
-<p lang="x-none" style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;">Set GIT_SSH=%Disk%:\putty\plink.exe</p>
+<p><span lang="zh-TW">開啟</span><span lang="zh-TW"><span face="Calibri"> start_mdecourse.bat 並加入</span></span></p>
+<p lang="x-none" style="padding-left: 30px;">REM for putty</p>
+<p lang="x-none" style="padding-left: 30px;">Set GIT_HOME=%Cdisk%:\portablegit\bin\</p>
+<p lang="x-none" style="padding-left: 30px;">Set GIT_SSH=%Disk%:\putty\plink.exe</p>
 <h4>SSH 設定</h4>
-<p style="margin: 0in; font-family: 'Microsoft JhengHei'; font-size: 11.0pt;"><span lang="zh-TW">到 </span><span lang="en-US">.ssh </span><span lang="zh-TW">的目錄下</span></p>
-<p style="margin: 0in; font-family: 'Microsoft JhengHei'; font-size: 11.0pt;"><span lang="zh-TW"></span><span lang="x-none" style="font-family: Calibri;"><span face="Microsoft JhengHei" style="font-family: 'Microsoft JhengHei';">編輯 </span></span><span lang="x-none" style="font-family: Calibri;">config,插入</span></p>
-<p style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;"><span lang="en-US" style="font-family: 'Microsoft JhengHei';">P</span><span lang="x-none" style="font-family: Calibri;">roxy Command y:/putty/plink.exe github.com %h %p</span></p>
-<p style="margin: 0in; font-family: Calibri; font-size: 11.0pt;"><span lang="x-none" style="font-family: Calibri;">並註解掉</span></p>
-<p style="margin: 0in; font-family: Calibri; font-size: 11pt; padding-left: 30px;"><span lang="x-none" style="font-family: Calibri;">IdentityFile "y:\home_mdecourse\.ssh\id_rsa"</span></p>
-<p><span lang="x-none" style="font-family: Calibri;"><img caption="false" height="139" src="/images/SciTE_ssh_config.png" width="400"/></span></p>
+<p><span lang="zh-TW">到 </span><span lang="en-US">.ssh </span><span lang="zh-TW">的目錄下</span></p>
+<p><span lang="zh-TW"></span><span lang="x-none"><span face="Microsoft JhengHei">編輯 </span></span><span lang="x-none">config,插入</span></p>
+<p style="padding-left: 30px;"><span lang="en-US">P</span><span lang="x-none">roxy Command y:/putty/plink.exe github.com %h %p</span></p>
+<p><span lang="x-none">並註解掉</span></p>
+<p style="padding-left: 30px;"><span lang="x-none">IdentityFile "y:\home_mdecourse\.ssh\id_rsa"</span></p>
+<p><span lang="x-none"><img caption="false" height="139" src="/images/SciTE_ssh_config.png" width="400"/></span></p>
 <h4>設定 SSH key 的使用配置 ( 使用 Ipv 6 網路 )</h4>
 <p>先下載 <a href="http://mde.tw/cp2019/content/USB%20%E7%A8%8B%E5%BC%8F%E7%B3%BB%E7%B5%B1.html">putty</a>  , 放到可攜系統的 data 目錄底下</p>
 <h4>Key 轉換 ( 此設定方法是拿先前的 <span>Open SSH key</span> )</h4>
@@ -53,11 +48,15 @@
 <p style="padding-left: 30px;">Password : kmolab</p>
 <p><img alt="" height="400" src="/images/putty_set_proxy.png" width="401"/></p>
 <p>設定 SSH 底下的 Auth</p>
-<p><span lang="x-none" style="font-family: Calibri;">Private key file for authentication :  </span><span lang="en-US" style="font-family: 'Microsoft JhengHei';">( 請指定 rsa-</span><span lang="x-none" style="font-family: Calibri;">key </span><span lang="zh-TW" style="font-family: 'Microsoft JhengHei';">的位置 </span><span lang="en-US" style="font-family: 'Microsoft JhengHei';">)</span></p>
-<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';"><img alt="" height="400" src="/images/putty_set_ssh_auth.png" width="401"/></span></p>
-<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';">*p.s.  需指定 ppk 檔</span></p>
-<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';">儲存 session 設定</span></p>
-<p><span lang="en-US" style="font-family: 'Microsoft JhengHei';"><img alt="" height="400" src="/images/putty_save.png" width="401"/></span></p>
+<p style="padding-left: 30px;"><span lang="x-none">Private key file for authentication :  </span><span lang="en-US">( 請指定 rsa-</span><span lang="x-none">key </span><span lang="zh-TW">的位置 </span><span lang="en-US">)</span></p>
+<p><span lang="en-US"><img alt="" height="400" src="/images/putty_set_ssh_auth.png" width="401"/></span></p>
+<p><span lang="en-US">*p.s.  需指定 ppk 檔</span></p>
+<p><span lang="en-US">儲存 session 設定</span></p>
+<p><span lang="en-US"><img alt="" height="400" src="/images/putty_save.png" width="401"/></span></p>
+<h1>Develop</h1>
+<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
+<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
+<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
 <h1>Solvespace</h1>
 <h2>Solvespace 編譯</h2>
 <p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe</p>
@@ -116,5 +115,6 @@
 <p style="padding-left: 30px;">[ 垂直</p>
 <p class="title style-scope ytd-video-primary-info-renderer"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">Solvespace Tutorial #12</yt-formatted-string></p>
 <p class="title style-scope ytd-video-primary-info-renderer"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/o6bomCAH2gI" width="560"></iframe></p>
-<p></p><h2>STL</h2>
-<p><iframe height="400" src="/static/viewstl.html?src=/downloads/ascii.stl" width="600"></iframe></p>
+<p></p>
+<h2>STL</h2>
+<p><iframe height="400" src="" width="600"></iframe></p><h1>V-rep</h1>
