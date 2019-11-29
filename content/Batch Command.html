@@ -154,10 +154,21 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Solvespace 操作 << <a href='Solvespace 操作.html'>Previous</a> <a href='V-rep.html'>Next</a> >> V-rep<br /><h1>STL</h1>
-<p></p>
-<p><iframe height="400" src="./../downloads/cube.html" width="600"></iframe></p>
-<br />Solvespace 操作 << <a href='Solvespace 操作.html'>Previous</a> <a href='V-rep.html'>Next</a> >> V-rep</div>
+    <div id="tipue_search_content">SSH << <a href='SSH.html'>Previous</a> <a href='Develop.html'>Next</a> >> Develop<br /><h1>Batch Command</h1>
+<p>cad.bat<span>- 啟動 wsgi.py 並且在瀏覽器開啟 https 9443 動態網頁</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+y:
+cd tmp\cad2019\cmsimde
+start python wsgi.py | start chrome https://localhost:9443</pre>
+<p><span> cadh.bat - 啟動 http-server 並且在瀏覽氣開啟 https 8444 靜態網頁</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+y:
+cd tmp\cad2019\
+start python http-server.py | start chrome https://localhost:8444</pre>
+<p><span>cadg.bat - 啟動 gitextensions </span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\</pre>
+<p><br/><br/></p><br />SSH << <a href='SSH.html'>Previous</a> <a href='Develop.html'>Next</a> >> Develop</div>
         
     <!-- footer -->
       <div class="container">

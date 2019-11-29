@@ -9,6 +9,7 @@
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
+<h1>環境設定</h1>
 <h2>SSH</h2>
 <h4>批次檔設定</h4>
 <p>執行隨身碟 SciTE.exe ( 位於 201906_fall\data\wscite415\wscite 目錄下 )</p>
@@ -53,7 +54,21 @@
 <p><span lang="en-US">*p.s.  需指定 ppk 檔</span></p>
 <p><span lang="en-US">儲存 session 設定</span></p>
 <p><span lang="en-US"><img alt="" height="400" src="/images/putty_save.png" width="401"/></span></p>
-<h1>Develop</h1>
+<h2>Batch Command</h2>
+<p>cad.bat<span>- 啟動 wsgi.py 並且在瀏覽器開啟 https 9443 動態網頁</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+y:
+cd tmp\cad2019\cmsimde
+start python wsgi.py | start chrome https://localhost:9443</pre>
+<p><span> cadh.bat - 啟動 http-server 並且在瀏覽氣開啟 https 8444 靜態網頁</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+y:
+cd tmp\cad2019\
+start python http-server.py | start chrome https://localhost:8444</pre>
+<p><span>cadg.bat - 啟動 gitextensions </span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\</pre>
+<p><br/><br/></p><h1>Develop</h1>
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
@@ -127,7 +142,8 @@
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/U6cAGaNZaQ0" width="560"></iframe></p>
 <h2>STL</h2>
 <p></p>
-<p><iframe height="400" src="/get_page/STL/downloads/cube.html" width="600"></iframe></p><h1>V-rep</h1>
+<p><iframe height="400" src="/downloads/cube.html" width="600"></iframe></p>
+<h1>V-rep</h1>
 <h1>Webots</h1>
 <h4><span>Webots 啟動:</span></h4>
 <p><span>執行路徑設定<br/></span></p>
@@ -148,3 +164,6 @@
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">taskkill /IM webots.exe /F
 </pre>
 <p><img alt="" height="300" src="/images/webots_stop.png" width="261"/><img caption="false" height="0" src="/images/webots_stop.png" width="300"/></p>
+<h1>NX</h1>
+<h2>NX3</h2>
+<h2>NX12</h2>
