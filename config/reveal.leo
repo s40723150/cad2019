@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
@@ -13,28 +10,42 @@
 <v t="leo.20180902120538.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20180902120538.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20180902120523.1" a="E"><vh>編輯 reveal</vh>
-<v t="leo.20180902120523.2" a="E"><vh>@path ./../reveal</vh>
-<v t="leo.20180902120523.3" a="E"><vh>@clean index.html</vh>
-<v t="leo.20180902120523.4" a="E"><vh>html</vh>
+<v t="leo.20180902120523.1"><vh>編輯 reveal</vh>
+<v t="leo.20180902120523.2"><vh>@path ./../reveal</vh>
+<v t="leo.20180902120523.3"><vh>@clean index.html</vh>
+<v t="leo.20180902120523.4"><vh>html</vh>
 <v t="leo.20180902120523.5"><vh>head</vh></v>
-<v t="leo.20180902120523.6" a="E"><vh>body</vh>
-<v t="leo.20180902120523.7" a="E"><vh>reveal div</vh>
-<v t="leo.20180902120523.8" a="E"><vh>slides div</vh>
-<v t="leo.20180902120523.9" a="E"><vh>封面投影片</vh>
+<v t="leo.20180902120523.6"><vh>body</vh>
+<v t="leo.20180902120523.7"><vh>reveal div</vh>
+<v t="leo.20180902120523.8"><vh>slides div</vh>
+<v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20180902120523.11" a="E"><vh>快捷鍵</vh>
+<v t=".20191206030415.1"><vh>Ch1</vh>
+<v t=".20191206030415.2"><vh>Ch1</vh></v>
+</v>
+<v t=".20191205223224.1"><vh>Ch2</vh>
+<v t=".20191205223224.2"><vh>Ch2內容1</vh>
+<v t=".20191205223224.3"><vh>內容</vh></v>
+</v>
+<v t=".20191205223224.4"><vh>Ch2內容2</vh>
+<v t=".20191205223224.5"><vh>內容</vh></v>
+</v>
+<v t=".20191206025510.1"><vh>Ch2內容3</vh>
+<v t=".20191206025510.2"><vh>內容</vh></v>
+</v>
+</v>
+<v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="leo.20180902120523.13"><vh>各式內容引用範例</vh>
-<v t="leo.20180902120523.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20180902120523.14"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180902120523.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20180902120523.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20180902120523.16"><vh>導入縮排程式碼</vh>
 <v t="leo.20180902120523.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20180902120523.18" a="E"><vh>導入影片</vh>
+<v t="leo.20180902120523.18"><vh>導入影片</vh>
 <v t="leo.20180902120523.19"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
@@ -47,17 +58,109 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## CMSimfly 網際內容管理
+<t tx=".20191205223224.1">&lt;section&gt;
+@others
+&lt;/section&gt;
 
-### KMOLab
+</t>
+<t tx=".20191205223224.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20191205223224.3">## CHAPTER 2  入門
+## GETTING STARTED
+
+*  啟動NX12並打開文件、列印、儲存和關閉文件
+
+* NX12介面
+
+* 圖層
+
+* 座標系統
+
+* 工具列
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+</t>
+<t tx=".20191205223224.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20191205223224.5">## 圖層
+
+* 工作
+
+* 可選
+
+* 僅可見
+
+* 不可見
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
+<t tx=".20191206025510.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20191206025510.2">## 座標系統
+
+* 絕對坐標系（CSYS）
+
+* 工作坐標系（WCS）
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
+<t tx=".20191206030415.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx=".20191206030415.2">## CHAPTER 1  簡介
+## INTRODUCTION
+
+* CAD / CAM 開發的簡歷史
+
+* CAD / CAM / CAE 的定義
+
+* 各章節教程摘要
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+
+
+
+
+
+</t>
+<t tx="leo.20180902120523.1"></t>
+<t tx="leo.20180902120523.10">## cad2019 個人簡報
+### 40723150
 
 &lt;small&gt;
-Created by [KMOLab](http://lab.kmol.info/)
+Created by [40723150](https://github.com/s40723150/cad2019)
 &lt;/small&gt;
-
-[CMSimfly 網誌](./../blog/index.html)
-
 
 </t>
 <t tx="leo.20180902120523.11">&lt;section data-markdown&gt;
