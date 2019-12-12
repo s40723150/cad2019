@@ -156,7 +156,65 @@ img.add_border {
         </header>
     <div id="tipue_search_content">NX3 << <a href='NX3.html'>Previous</a> <a href='CH1 引言.html'>Next</a> >> CH1 引言<br /><h1>NX12</h1>
 <p><a href="http://mde.tw/cad2019/downloads/NX-12-for-Engineering-Design.pdf">NX12 教材</a> 資料整理</p>
-<br />NX3 << <a href='NX3.html'>Previous</a> <a href='CH1 引言.html'>Next</a> >> CH1 引言</div>
+<h4>NX12配置(合併至現有可攜)</h4>
+<p>先下載<a href="https://drive.google.com/a/gm.nfu.edu.tw/uc?id=1Ul025kwP3I1SC0aD1YEzZRcL0ZzIlO1p&amp;export=download">NX12可攜版</a></p>
+<p>解壓縮<img caption="false" height="20" src="./../images/配置_NX12.png" width="64"/>和<img alt="" height="20" src="./../images/配置_startNX12.png" width="105"/></p>
+<p><img alt="" height="20" src="./../images/配置_NX12.png" width="63"/>解壓縮到可攜系統的<img alt="" height="20" src="./../images/配置_解壓縮位置.png" width="52"/>目錄底下</p>
+<p><img alt="" height="20" src="./../images/%E9%85%8D%E7%BD%AE_startNX12.png" width="105"/><span>解壓縮到可攜系統的</span><img alt="" height="20" src="./../images/配置_解壓縮位置-2.png" width="93"/>目錄底下</p>
+<p>*注意<img alt="" height="20" src="./../images/%E9%85%8D%E7%BD%AE_startNX12.png" width="105"/>裡面的 %path%; 記得刪除，不然無法執行 python<img caption="false" height="20" src="./../images/配置_注意.png" width="401"/></p>
+<hr/>
+<h4>批次檔單獨執行NX12設定(在Y槽開啟)</h4>
+<p>將<img alt="" height="20" src="./../images/%E9%85%8D%E7%BD%AE_startNX12.png" width="105"/>裡面的程式碼改成</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+REM for NX12
+set UGII_BASE_DIR=%Disk%:\NX12
+set TMP_DIR=%Disk%:\tmp
+set UGII_USER_PROFILE_DIR=%Disk%:\home
+set START_DIR=%TMP_DIR%
+set UGII_TMP_DIR=%TMP_DIR%
+set UGII_USER_DIR=%Disk%:\tmp
+set UGII_GROUP_DIR=%Disk%:\tmp
+set UGII_SITE_DIR=%Disk%:\tmp
+set UGII_BASE_DIR_CUSTOM=%UGII_BASE_DIR%
+
+set SPLM_LICENSE_SERVER=28000@140.130.17.37
+set UGII_LANG=english
+
+set UGII_ROOT_DIR=%UGII_BASE_DIR%\ugii
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_TEMPLATE_DIR=%UGII_ROOT_DIR%\templates
+set ugpath=%UGII_BASE_DIR%\nxbin;%UGII_BASE_DIR%\ugii;%UGII_BASE_DIR%\NXBIN\Radical;%UGII_BASE_DIR%\NXBIN\managed;
+
+path=%ugpath%;
+
+start %UGII_BASE_DIR%\ugii\ugraf.exe -nx
+
+Exit</pre>
+<hr/>
+<h4>停止可攜同時停止NX12(修改 stop.bat)</h4>
+<p>將<img alt="" height="20" src="./../images/配置_stop.png" width="76"/>裡面程式碼改成</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+path=%PATH%;
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM node.exe /F
+taskkill /IM Range.exe /F
+taskkill /IM SciTE.exe /F
+taskkill /IM webots.exe /F
+taskkill /IM ugraf.exe /F
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT</pre>
+<p>主要是通過<br/>taskkill /IM ugraf.exe /F<br/>來停止NX12</p><br />NX3 << <a href='NX3.html'>Previous</a> <a href='CH1 引言.html'>Next</a> >> CH1 引言</div>
         
     <!-- footer -->
       <div class="container">

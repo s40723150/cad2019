@@ -210,6 +210,7 @@ img.add_border {
 <p style="padding-left: 30px;">圖層用於將對象存儲在文件中，並將對象收集到文件中。有條理和一致的方式。與簡單的視覺工具（例如顯示和隱藏），圖層提供一種永久的方式來組織和管理文件中對象的可見性和選擇性。</p>
 <p style="padding-left: 30px;">2.4.1 圖層控制</p>
 <p style="padding-left: 30px;">使用NX 12，您可以使用“圖層”控制對像是可見還是可選。一層是NX 12中所有對象必須具有的系統定義的屬性，例如顏色，字體和寬度。那裡NX 12中有256個可用層，其中之一始終是工作層。 256個圖層中的任何一個都可以被分配給四種狀態分類之一。<br/>•工作<br/>•可選<br/>•僅可見<br/>•不可見<br/>工作層始終可見並且可以選擇。啟動新零件文件時，第1層是默認的工作層。當工作層更改為另一種類型的圖層時，先前的工作層會自動變為“可選”狀態，然後將其分配為“僅可見”或“不可見”狀態。可以在一圖層上的對像數量不受限制。可以自由選擇要創建的圖層對象及其所在層的狀態。要將狀態分配給一個或多個圖層，<br/>-&gt;選擇查看→圖層設置<br/>但是，應該注意，在關於圖層將有利於保持一致性文件之間。</p>
+<p style="padding-left: 30px;"><img caption="false" height="100" src="./../images/NX12_ch2_4_1.png" width="348"/></p>
 <p style="padding-left: 30px;">2.4.2 分層命令</p>
 <p style="padding-left: 30px;">練習“圖層”中的命令。 首先，我們將創建兩個模型按如下方法處理。 <br/>-&gt;選擇文件→新建、命名檔案並選擇要在其中保存文件的文件夾。 選擇單位為毫米。 選擇文件類型作為模型<br/>-&gt;選擇菜單→插入→設計特徵→錐<br/>-&gt;在類型下選擇直徑和高度<br/>-&gt;點擊確定<br/>-&gt;右鍵單擊屏幕，然後選擇“東方視圖”→Trimetric<br/>-&gt;右鍵單擊屏幕，然後選擇“渲染”。樣式→陰影<br/>您將能夠看到類似於圖片的實心圓錐在右邊。<br/>現在讓我們練習一些圖層命令。<br/>-&gt;選擇查看→移動到圖層<br/>系統將要求您選擇一個對象<br/>-&gt;將光標移到圓錐上並單擊，使其突出顯示<br/>-&gt;點擊確定<br/>-&gt;在窗口頂部的“目標圖層”或“類別”空間中，鍵入25，然後單擊“確定”。<br/>好圓錐現在已經到達第25層。 它不再是在第1層中看到。<br/>-&gt;要查看圓錐體，請單擊查看→圖層設置<br/>-&gt;可以看到第25層有對象，而默認的工作層1沒有對象。錐體將再次出現在屏幕上。 儲存檔案，因為我們將在本教程的後面部分中使用它。</p>
 <p>2.5 座標系統</p>
@@ -217,9 +218,10 @@ img.add_border {
 <p style="padding-left: 30px;">代表絕對坐標系的模型</p>
 <p style="padding-left: 30px;"><img caption="false" height="150" src="./../images/NX12_CSYS.png" width="171"/></p>
 <p style="padding-left: 30px;">2.5.2 工作坐標系（WCS）</p>
-<p style="padding-left: 30px;">工作坐標系（WCS）是您要用於構造時要使用的確定特徵的方向和角度。 WCS的軸表示為XC，YC和ZC。（“ C”代表“當前”）。它是可能有多個坐標<br/>零件文件中的系統，但其中只有一個可以是工作坐標系。<br/><img caption="false" height="200" src="./../images/NX12_WCS.png" width="217"/></p>
+<p style="padding-left: 30px;">工作坐標系（WCS）是您要用於構造時要使用的確定特徵的方向和角度。 WCS的軸表示為XC，YC和ZC。（“ C”代表“當前”）。它是可能有多個坐標零件文件中的系統，但其中只有一個可以是工作坐標系。<br/><img caption="false" height="200" src="./../images/NX12_WCS.png" width="217"/></p>
 <p style="padding-left: 30px;">2.5.3 移動 WCS</p>
 <p style="padding-left: 30px;">移動和旋轉 WCS<br/>-&gt;選擇菜單→格式→ WCS</p>
+<p style="padding-left: 30px;"><img caption="false" height="350" src="./../images/NX12_ch2_5_3.png" width="417"/></p>
 <p>2.6 工具列</p><br />CH1 引言 << <a href='CH1 引言.html'>Previous</a> <a href='CH3 二維草圖.html'>Next</a> >> CH3 二維草圖</div>
         
     <!-- footer -->

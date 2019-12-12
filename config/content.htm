@@ -169,7 +169,65 @@ Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\</pre>
 <h2>NX3</h2>
 <h2>NX12</h2>
 <p><a href="http://mde.tw/cad2019/downloads/NX-12-for-Engineering-Design.pdf">NX12 教材</a> 資料整理</p>
-<h3>CH1 引言</h3>
+<h4>NX12配置(合併至現有可攜)</h4>
+<p>先下載<a href="https://drive.google.com/a/gm.nfu.edu.tw/uc?id=1Ul025kwP3I1SC0aD1YEzZRcL0ZzIlO1p&amp;export=download">NX12可攜版</a></p>
+<p>解壓縮<img caption="false" height="20" src="/images/配置_NX12.png" width="64"/>和<img alt="" height="20" src="/images/配置_startNX12.png" width="105"/></p>
+<p><img alt="" height="20" src="/images/配置_NX12.png" width="63"/>解壓縮到可攜系統的<img alt="" height="20" src="/images/配置_解壓縮位置.png" width="52"/>目錄底下</p>
+<p><img alt="" height="20" src="/images/%E9%85%8D%E7%BD%AE_startNX12.png" width="105"/><span>解壓縮到可攜系統的</span><img alt="" height="20" src="/images/配置_解壓縮位置-2.png" width="93"/>目錄底下</p>
+<p>*注意<img alt="" height="20" src="/images/%E9%85%8D%E7%BD%AE_startNX12.png" width="105"/>裡面的 %path%; 記得刪除，不然無法執行 python<img caption="false" height="20" src="/images/配置_注意.png" width="401"/></p>
+<hr/>
+<h4>批次檔單獨執行NX12設定(在Y槽開啟)</h4>
+<p>將<img alt="" height="20" src="/images/%E9%85%8D%E7%BD%AE_startNX12.png" width="105"/>裡面的程式碼改成</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+REM for NX12
+set UGII_BASE_DIR=%Disk%:\NX12
+set TMP_DIR=%Disk%:\tmp
+set UGII_USER_PROFILE_DIR=%Disk%:\home
+set START_DIR=%TMP_DIR%
+set UGII_TMP_DIR=%TMP_DIR%
+set UGII_USER_DIR=%Disk%:\tmp
+set UGII_GROUP_DIR=%Disk%:\tmp
+set UGII_SITE_DIR=%Disk%:\tmp
+set UGII_BASE_DIR_CUSTOM=%UGII_BASE_DIR%
+
+set SPLM_LICENSE_SERVER=28000@140.130.17.37
+set UGII_LANG=english
+
+set UGII_ROOT_DIR=%UGII_BASE_DIR%\ugii
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_TEMPLATE_DIR=%UGII_ROOT_DIR%\templates
+set ugpath=%UGII_BASE_DIR%\nxbin;%UGII_BASE_DIR%\ugii;%UGII_BASE_DIR%\NXBIN\Radical;%UGII_BASE_DIR%\NXBIN\managed;
+
+path=%ugpath%;
+
+start %UGII_BASE_DIR%\ugii\ugraf.exe -nx
+
+Exit</pre>
+<hr/>
+<h4>停止可攜同時停止NX12(修改 stop.bat)</h4>
+<p>將<img alt="" height="20" src="/images/配置_stop.png" width="76"/>裡面程式碼改成</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+path=%PATH%;
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM node.exe /F
+taskkill /IM Range.exe /F
+taskkill /IM SciTE.exe /F
+taskkill /IM webots.exe /F
+taskkill /IM ugraf.exe /F
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+EXIT</pre>
+<p>主要是通過<br/>taskkill /IM ugraf.exe /F<br/>來停止NX12</p><h3>CH1 引言</h3>
 <p>工程師現在使用 CAD、CAM 和 CAE 系統來進行自動化的設計和生產，現在這些系統每天被用在各種不同的工程任務。底下簡要說明如何<span>使用 CAD、CAM 和 CAE 來實現產品的過程。</span></p>
 <p><span>1.1 產品實現過程</span></p>
 <p style="padding-left: 30px;"><span>產品實現過程可以大致分為兩個階段：設計和製造。</span></p>
@@ -265,6 +323,7 @@ Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\</pre>
 <p style="padding-left: 30px;">圖層用於將對象存儲在文件中，並將對象收集到文件中。有條理和一致的方式。與簡單的視覺工具（例如顯示和隱藏），圖層提供一種永久的方式來組織和管理文件中對象的可見性和選擇性。</p>
 <p style="padding-left: 30px;">2.4.1 圖層控制</p>
 <p style="padding-left: 30px;">使用NX 12，您可以使用“圖層”控制對像是可見還是可選。一層是NX 12中所有對象必須具有的系統定義的屬性，例如顏色，字體和寬度。那裡NX 12中有256個可用層，其中之一始終是工作層。 256個圖層中的任何一個都可以被分配給四種狀態分類之一。<br/>•工作<br/>•可選<br/>•僅可見<br/>•不可見<br/>工作層始終可見並且可以選擇。啟動新零件文件時，第1層是默認的工作層。當工作層更改為另一種類型的圖層時，先前的工作層會自動變為“可選”狀態，然後將其分配為“僅可見”或“不可見”狀態。可以在一圖層上的對像數量不受限制。可以自由選擇要創建的圖層對象及其所在層的狀態。要將狀態分配給一個或多個圖層，<br/>-&gt;選擇查看→圖層設置<br/>但是，應該注意，在關於圖層將有利於保持一致性文件之間。</p>
+<p style="padding-left: 30px;"><img caption="false" height="100" src="/images/NX12_ch2_4_1.png" width="348"/></p>
 <p style="padding-left: 30px;">2.4.2 分層命令</p>
 <p style="padding-left: 30px;">練習“圖層”中的命令。 首先，我們將創建兩個模型按如下方法處理。 <br/>-&gt;選擇文件→新建、命名檔案並選擇要在其中保存文件的文件夾。 選擇單位為毫米。 選擇文件類型作為模型<br/>-&gt;選擇菜單→插入→設計特徵→錐<br/>-&gt;在類型下選擇直徑和高度<br/>-&gt;點擊確定<br/>-&gt;右鍵單擊屏幕，然後選擇“東方視圖”→Trimetric<br/>-&gt;右鍵單擊屏幕，然後選擇“渲染”。樣式→陰影<br/>您將能夠看到類似於圖片的實心圓錐在右邊。<br/>現在讓我們練習一些圖層命令。<br/>-&gt;選擇查看→移動到圖層<br/>系統將要求您選擇一個對象<br/>-&gt;將光標移到圓錐上並單擊，使其突出顯示<br/>-&gt;點擊確定<br/>-&gt;在窗口頂部的“目標圖層”或“類別”空間中，鍵入25，然後單擊“確定”。<br/>好圓錐現在已經到達第25層。 它不再是在第1層中看到。<br/>-&gt;要查看圓錐體，請單擊查看→圖層設置<br/>-&gt;可以看到第25層有對象，而默認的工作層1沒有對象。錐體將再次出現在屏幕上。 儲存檔案，因為我們將在本教程的後面部分中使用它。</p>
 <p>2.5 座標系統</p>
@@ -272,9 +331,10 @@ Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\</pre>
 <p style="padding-left: 30px;">代表絕對坐標系的模型</p>
 <p style="padding-left: 30px;"><img caption="false" height="150" src="/images/NX12_CSYS.png" width="171"/></p>
 <p style="padding-left: 30px;">2.5.2 工作坐標系（WCS）</p>
-<p style="padding-left: 30px;">工作坐標系（WCS）是您要用於構造時要使用的確定特徵的方向和角度。 WCS的軸表示為XC，YC和ZC。（“ C”代表“當前”）。它是可能有多個坐標<br/>零件文件中的系統，但其中只有一個可以是工作坐標系。<br/><img caption="false" height="200" src="/images/NX12_WCS.png" width="217"/></p>
+<p style="padding-left: 30px;">工作坐標系（WCS）是您要用於構造時要使用的確定特徵的方向和角度。 WCS的軸表示為XC，YC和ZC。（“ C”代表“當前”）。它是可能有多個坐標零件文件中的系統，但其中只有一個可以是工作坐標系。<br/><img caption="false" height="200" src="/images/NX12_WCS.png" width="217"/></p>
 <p style="padding-left: 30px;">2.5.3 移動 WCS</p>
 <p style="padding-left: 30px;">移動和旋轉 WCS<br/>-&gt;選擇菜單→格式→ WCS</p>
+<p style="padding-left: 30px;"><img caption="false" height="350" src="/images/NX12_ch2_5_3.png" width="417"/></p>
 <p>2.6 工具列</p><h3>CH3 二維草圖</h3>
 <p>3.1</p>
 <p>3.2</p>
