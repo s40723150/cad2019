@@ -21,21 +21,58 @@
 <v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t=".20191206030415.1"><vh>NX12</vh>
-<v t=".20191206030415.2"><vh>NX12</vh></v>
+<v t=".20191206030415.1"><vh>大綱</vh>
+<v t=".20191206030415.2"><vh>大綱內容</vh></v>
 </v>
-<v t=".20200109190016.1"><vh>Ch1</vh>
-<v t=".20200109190016.2"><vh>Ch1</vh></v>
+<v t=".20191205223224.1"><vh>solvespace</vh>
+<v t=".20200109203923.1"><vh>solvespace</vh>
+<v t=".20200109203923.2"><vh>內容</vh></v>
 </v>
-<v t=".20191205223224.1"><vh>Ch2</vh>
-<v t=".20191205223224.2"><vh>Ch2內容1</vh>
+<v t=".20200109190016.1"><vh>solvespace 編譯</vh>
+<v t=".20200109190016.2"><vh>內容</vh></v>
+</v>
+<v t=".20191205223224.2"><vh>solvespace 操作</vh>
 <v t=".20191205223224.3"><vh>內容</vh></v>
 </v>
-<v t=".20191205223224.4"><vh>Ch2內容2</vh>
-<v t=".20191205223224.5"><vh>內容</vh></v>
 </v>
-<v t=".20191206025510.1"><vh>Ch2內容3</vh>
-<v t=".20191206025510.2"><vh>內容</vh></v>
+<v t=".20200109213821.1"><vh>V-rep</vh>
+<v t=".20200109213821.2"><vh>內容</vh></v>
+</v>
+<v t=".20200109215658.1"><vh>Webots</vh>
+<v t=".20200109215658.2"><vh>內容</vh></v>
+</v>
+<v t=".20200109204728.1"><vh>NX12</vh>
+<v t=".20200109204728.2"><vh>NX12內容</vh>
+<v t=".20200109204728.3"><vh>內容</vh></v>
+</v>
+<v t=".20200109204728.4"><vh>Ch1內容</vh>
+<v t=".20200109204728.5"><vh>內容</vh></v>
+</v>
+<v t=".20200109204728.6"><vh>Ch2內容1</vh>
+<v t=".20200109204728.7"><vh>內容</vh></v>
+</v>
+<v t=".20200109204728.8"><vh>Ch2內容2</vh>
+<v t=".20200109204728.9"><vh>內容</vh></v>
+</v>
+<v t=".20200109204728.10"><vh>Ch2內容3</vh>
+<v t=".20200109204728.11"><vh>內容</vh></v>
+</v>
+</v>
+<v t=".20200109220000.1"><vh>可攜設定</vh>
+<v t=".20200109220000.2"><vh>NX12內容</vh>
+<v t=".20200109220000.3"><vh>內容</vh></v>
+</v>
+<v t=".20200109220000.4"><vh>Ch1內容</vh>
+<v t=".20200109220000.5"><vh>內容</vh></v>
+</v>
+<v t=".20200109220000.6"><vh>Ch2內容1</vh>
+<v t=".20200109220000.7"><vh>內容</vh></v>
+</v>
+<v t=".20200109220000.8"><vh>Ch2內容2</vh>
+<v t=".20200109220000.9"><vh>內容</vh></v>
+</v>
+<v t=".20200109220000.10"><vh>Ch2內容3</vh>
+<v t=".20200109220000.11"><vh>內容</vh></v>
 </v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
@@ -77,61 +114,19 @@
 
 						
 </t>
-<t tx=".20191205223224.3">## CHAPTER 2  入門
-## GETTING STARTED
+<t tx=".20191205223224.3">## solvespace 操作
 
-*  啟動NX12並打開文件、列印、儲存和關閉文件
+基本操作
 
-* NX12介面
+→幾何草圖
 
-* 圖層
+→約束條件
 
-* 座標系統
+→實體特徵
 
-* 工具列
-
+ &lt;small&gt;
  [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
-</t>
-<t tx=".20191205223224.4">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx=".20191205223224.5">## 圖層
-
-* 工作
-
-* 可選
-
-* 僅可見
-
-* 不可見
-
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
-<t tx=".20191206025510.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx=".20191206025510.2">## 座標系統
-
-* 絕對坐標系（CSYS）
-
-* 工作坐標系（WCS）
-
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
+ &lt;/small&gt;</t>
 <t tx=".20191206030415.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -141,27 +136,106 @@
 
 						
 </t>
-<t tx=".20191206030415.2">## NX12 Tutorial
+<t tx=".20191206030415.2">## 本學期主要內容
 
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
- 
- &lt;iframe src="https://youtu.be/o92c0ZIS5ng" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+* solvespace
 
+* V-rep
 
+* Webots
 
+* NX12
 
-
-</t>
+* 可攜系統設定</t>
 <t tx=".20200109190016.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
     &lt;/script&gt;
 &lt;/section&gt;
 
 
+
 						
 </t>
-<t tx=".20200109190016.2">## CHAPTER 1  簡介
+<t tx=".20200109190016.2">## solvespace 編譯
+
+&lt;iframe width="1263" height="480" src="https://www.youtube.com/embed/XmXqpvr044I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+ &lt;small&gt;
+ [對應網站](https://s40723150.github.io/cad2019/content/Solvespace%20%E7%B7%A8%E8%AD%AF.html)
+&lt;/small&gt;
+
+
+
+
+</t>
+<t tx=".20200109203923.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109203923.2">## solvespace
+
+* solvespace 編譯
+
+* solvespace 操作</t>
+<t tx=".20200109204728.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx=".20200109204728.10">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109204728.11">## 座標系統
+
+* 絕對坐標系（CSYS）
+
+* 工作坐標系（WCS）
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
+<t tx=".20200109204728.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109204728.3">## NX12 
+
+NX12 Tutorial 翻譯
+</t>
+<t tx=".20200109204728.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109204728.5">## CHAPTER 1  簡介
 ## INTRODUCTION
 
 * CAD / CAM 開發的簡歷史
@@ -177,6 +251,209 @@
 
 
 </t>
+<t tx=".20200109204728.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109204728.7">## CHAPTER 2  入門
+## GETTING STARTED
+
+*  啟動NX12並打開文件、列印、儲存和關閉文件
+
+* NX12介面
+
+* 圖層
+
+* 座標系統
+
+* 工具列
+
+ &lt;small&gt;
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ &lt;/small&gt;</t>
+<t tx=".20200109204728.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109204728.9">## 圖層
+
+* 工作
+
+* 可選
+
+* 僅可見
+
+* 不可見
+
+&lt;small&gt;
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+&lt;/small&gt;</t>
+<t tx=".20200109213821.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx=".20200109213821.2">## V-rep
+
+將模型導入V-rep，並設定模型的屬性
+
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/o92c0ZIS5ng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+ &lt;small&gt;
+ [對應網站](https://s40723150.github.io/cad2019/content/V-rep.html)
+&lt;/small&gt;</t>
+<t tx=".20200109215658.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx=".20200109215658.2">## Webots
+
+將模型導入webots，並設定模擬環境
+
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/gtQYFACh19o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+ &lt;small&gt;
+ [對應網站](https://s40723150.github.io/cad2019/content/V-rep.html)
+&lt;/small&gt;</t>
+<t tx=".20200109220000.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx=".20200109220000.10">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109220000.11">## 座標系統
+
+* 絕對坐標系（CSYS）
+
+* 工作坐標系（WCS）
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
+<t tx=".20200109220000.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109220000.3">## NX12 
+
+NX12 Tutorial 翻譯
+</t>
+<t tx=".20200109220000.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109220000.5">## CHAPTER 1  簡介
+## INTRODUCTION
+
+* CAD / CAM 開發的簡歷史
+
+* CAD / CAM / CAE 的定義
+
+* 各章節教程摘要
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+
+
+
+
+
+</t>
+<t tx=".20200109220000.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109220000.7">## CHAPTER 2  入門
+## GETTING STARTED
+
+*  啟動NX12並打開文件、列印、儲存和關閉文件
+
+* NX12介面
+
+* 圖層
+
+* 座標系統
+
+* 工具列
+
+ &lt;small&gt;
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ &lt;/small&gt;</t>
+<t tx=".20200109220000.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx=".20200109220000.9">## 圖層
+
+* 工作
+
+* 可選
+
+* 僅可見
+
+* 不可見
+
+&lt;small&gt;
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+&lt;/small&gt;</t>
 <t tx="leo.20180902120523.1"></t>
 <t tx="leo.20180902120523.10">## cad2019 個人簡報
 ### 40723150
@@ -235,8 +512,7 @@ $$I = \int \rho R^{2} dV$$
     &lt;/script&gt;
 &lt;/section&gt;
 </t>
-<t tx="leo.20180902120523.17">
-## 利用 Markdown 寫投影片
+<t tx="leo.20180902120523.17">## 利用 Markdown 寫投影片
 以下利用 Markdown 格式展示 Python 程式碼:
 ```
 @language python
