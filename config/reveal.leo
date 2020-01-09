@@ -21,8 +21,11 @@
 <v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t=".20191206030415.1"><vh>Ch1</vh>
-<v t=".20191206030415.2"><vh>Ch1</vh></v>
+<v t=".20191206030415.1"><vh>NX12</vh>
+<v t=".20191206030415.2"><vh>NX12</vh></v>
+</v>
+<v t=".20200109190016.1"><vh>Ch1</vh>
+<v t=".20200109190016.2"><vh>Ch1</vh></v>
 </v>
 <v t=".20191205223224.1"><vh>Ch2</vh>
 <v t=".20191205223224.2"><vh>Ch2內容1</vh>
@@ -138,7 +141,27 @@
 
 						
 </t>
-<t tx=".20191206030415.2">## CHAPTER 1  簡介
+<t tx=".20191206030415.2">## NX12 Tutorial
+
+ [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ 
+ &lt;iframe src="https://youtu.be/o92c0ZIS5ng" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+
+
+
+
+</t>
+<t tx=".20200109190016.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx=".20200109190016.2">## CHAPTER 1  簡介
 ## INTRODUCTION
 
 * CAD / CAM 開發的簡歷史
@@ -163,7 +186,7 @@ Created by [40723150](https://github.com/s40723150/cad2019)
 &lt;/small&gt;
 
 </t>
-<t tx="leo.20180902120523.11">&lt;section data-markdown&gt;
+<t tx="leo.20180902120523.11">&lt;!--&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
     &lt;/script&gt;
@@ -172,7 +195,8 @@ Created by [40723150](https://github.com/s40723150/cad2019)
 
 						
 </t>
-<t tx="leo.20180902120523.12"># 投影片快捷鍵
+<t tx="leo.20180902120523.12">&lt;!--
+# 投影片快捷鍵
 
 * 利用箭頭上下前後換頁
 * 按 f 鍵進入全螢幕模式 (full screen)
@@ -180,20 +204,20 @@ Created by [40723150](https://github.com/s40723150/cad2019)
 * 按 o 鍵可以切換單張或全域檢視 (overview)
 * 按 b 或 . 鍵可以切換螢幕黑屏 (black)
 * 按 Esc 可以退出全螢幕或全域檢視 (Escape)
-
+--&gt;
 </t>
-<t tx="leo.20180902120523.13">&lt;section&gt;
+<t tx="leo.20180902120523.13">&lt;!--
+&lt;section&gt;
 @others
 &lt;/section&gt;
-
 </t>
-<t tx="leo.20180902120523.14">&lt;section data-markdown&gt;
+<t tx="leo.20180902120523.14">&lt;!--
+&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
+#請注意, @others 不可以內縮#
 @others
-    &lt;/script&gt;
+   &lt;/script&gt;
 &lt;/section&gt;
-
 
 
 						
@@ -205,18 +229,14 @@ math should get its own line and be put in in double-dollarsigns:
 
 $$I = \int \rho R^{2} dV$$
 </t>
-<t tx="leo.20180902120523.16">&lt;section data-markdown&gt;
+<t tx="leo.20180902120523.16">&lt;!--&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
     &lt;/script&gt;
 &lt;/section&gt;
-
-
-
-						
 </t>
-<t tx="leo.20180902120523.17">## 利用 Markdown 寫投影片
+<t tx="leo.20180902120523.17">
+## 利用 Markdown 寫投影片
 以下利用 Markdown 格式展示 Python 程式碼:
 ```
 @language python
@@ -244,7 +264,7 @@ make = threading.Thread(target=domake)
 make.start()
 ```
 </t>
-<t tx="leo.20180902120523.18">&lt;section data-markdown&gt;
+<t tx="leo.20180902120523.18">&lt;!--&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
     &lt;/script&gt;
@@ -253,12 +273,14 @@ make.start()
 
 						
 </t>
-<t tx="leo.20180902120523.19">## 使用 iframe 導入影片
+<t tx="leo.20180902120523.19">
+ ## 使用 iframe 導入影片
 
 ### 導入影片 template
 
 &lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
+ 
+--&gt;</t>
 <t tx="leo.20180902120523.2"></t>
 <t tx="leo.20180902120523.3">@language xml
 @tabwidth -4
