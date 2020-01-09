@@ -266,9 +266,11 @@ NX12 Tutorial 翻譯
 <section data-markdown>
     <script type="text/template">
 <!-- 請注意, @others 不可以內縮 -->
-## NX12 
+## 可攜設定內容
 
-NX12 Tutorial 翻譯
+* SSH
+
+* Batch Command
     </script>
 </section>
 
@@ -278,16 +280,10 @@ NX12 Tutorial 翻譯
 <section data-markdown>
     <script type="text/template">
 <!-- 請注意, @others 不可以內縮 -->
-## CHAPTER 1  簡介
-## INTRODUCTION
+## SSH
+設定putty，讓SSH在ipv6環境下可正常運作
 
-* CAD / CAM 開發的簡歷史
-
-* CAD / CAM / CAE 的定義
-
-* 各章節教程摘要
-
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ [對應網站](https://s40723150.github.io/cad2019/content/SSH.html)
 
 
 
@@ -302,21 +298,16 @@ NX12 Tutorial 翻譯
 <section data-markdown>
     <script type="text/template">
 <!-- 請注意, @others 不可以內縮 -->
-## CHAPTER 2  入門
-## GETTING STARTED
-
-*  啟動NX12並打開文件、列印、儲存和關閉文件
-
-* NX12介面
-
-* 圖層
-
-* 座標系統
-
-* 工具列
-
+## Batch Command
+## 啟動9443動態
+```
+@echo off
+y:
+cd tmp\cad2019\cmsimde
+start python wsgi.py | start chrome https://localhost:9443
+```
  <small>
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ [對應網站](https://s40723150.github.io/cad2019/content/Batch%20Command.html)
  </small>
     </script>
 </section>
@@ -327,19 +318,17 @@ NX12 Tutorial 翻譯
 <section data-markdown>
     <script type="text/template">
 <!-- 請注意, @others 不可以內縮 -->
-## 圖層
-
-* 工作
-
-* 可選
-
-* 僅可見
-
-* 不可見
-
-<small>
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
-</small>
+## Batch Command
+## 啟動8444靜態
+```
+@echo off
+y:
+cd tmp\cad2019\
+start python http-server.py | start chrome https://localhost:8444
+```
+ <small>
+ [對應網站](https://s40723150.github.io/cad2019/content/Batch%20Command.html)
+ </small>
     </script>
 </section>
 
@@ -349,13 +338,15 @@ NX12 Tutorial 翻譯
 <section data-markdown>
     <script type="text/template">
 <!-- 請注意, @others 不可以內縮 -->
-## 座標系統
-
-* 絕對坐標系（CSYS）
-
-* 工作坐標系（WCS）
-
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+## Batch Command
+## 啟動8444靜態
+```
+@echo off
+Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\
+```
+ <small>
+ [對應網站](https://s40723150.github.io/cad2019/content/Batch%20Command.html)
+ </small>
     </script>
 </section>
 

@@ -59,19 +59,19 @@
 </v>
 </v>
 <v t=".20200109220000.1"><vh>可攜設定</vh>
-<v t=".20200109220000.2"><vh>NX12內容</vh>
+<v t=".20200109220000.2"><vh>可攜設定內容</vh>
 <v t=".20200109220000.3"><vh>內容</vh></v>
 </v>
-<v t=".20200109220000.4"><vh>Ch1內容</vh>
+<v t=".20200109220000.4"><vh>SSH內容</vh>
 <v t=".20200109220000.5"><vh>內容</vh></v>
 </v>
-<v t=".20200109220000.6"><vh>Ch2內容1</vh>
+<v t=".20200109220000.6"><vh>Batch Command內容1</vh>
 <v t=".20200109220000.7"><vh>內容</vh></v>
 </v>
-<v t=".20200109220000.8"><vh>Ch2內容2</vh>
+<v t=".20200109220000.8"><vh>Batch Command內容2</vh>
 <v t=".20200109220000.9"><vh>內容</vh></v>
 </v>
-<v t=".20200109220000.10"><vh>Ch2內容3</vh>
+<v t=".20200109220000.10"><vh>Batch Command內容3</vh>
 <v t=".20200109220000.11"><vh>內容</vh></v>
 </v>
 </v>
@@ -354,13 +354,16 @@ NX12 Tutorial 翻譯
 
 						
 </t>
-<t tx=".20200109220000.11">## 座標系統
-
-* 絕對坐標系（CSYS）
-
-* 工作坐標系（WCS）
-
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)</t>
+<t tx=".20200109220000.11">## Batch Command
+## 啟動8444靜態
+```
+@language python
+@echo off
+Y:GitExtensions\gitextensions.exe  browse y:\tmp\cad2019\
+```
+ &lt;small&gt;
+ [對應網站](https://s40723150.github.io/cad2019/content/Batch%20Command.html)
+ &lt;/small&gt;</t>
 <t tx=".20200109220000.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -372,10 +375,11 @@ NX12 Tutorial 翻譯
 
 						
 </t>
-<t tx=".20200109220000.3">## NX12 
+<t tx=".20200109220000.3">## 可攜設定內容
 
-NX12 Tutorial 翻譯
-</t>
+* SSH
+
+* Batch Command</t>
 <t tx=".20200109220000.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -387,16 +391,10 @@ NX12 Tutorial 翻譯
 
 						
 </t>
-<t tx=".20200109220000.5">## CHAPTER 1  簡介
-## INTRODUCTION
+<t tx=".20200109220000.5">## SSH
+設定putty，讓SSH在ipv6環境下可正常運作
 
-* CAD / CAM 開發的簡歷史
-
-* CAD / CAM / CAE 的定義
-
-* 各章節教程摘要
-
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ [對應網站](https://s40723150.github.io/cad2019/content/SSH.html)
 
 
 
@@ -414,21 +412,17 @@ NX12 Tutorial 翻譯
 
 						
 </t>
-<t tx=".20200109220000.7">## CHAPTER 2  入門
-## GETTING STARTED
-
-*  啟動NX12並打開文件、列印、儲存和關閉文件
-
-* NX12介面
-
-* 圖層
-
-* 座標系統
-
-* 工具列
-
+<t tx=".20200109220000.7">## Batch Command
+## 啟動9443動態
+```
+@language python
+@echo off
+y:
+cd tmp\cad2019\cmsimde
+start python wsgi.py | start chrome https://localhost:9443
+```
  &lt;small&gt;
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
+ [對應網站](https://s40723150.github.io/cad2019/content/Batch%20Command.html)
  &lt;/small&gt;</t>
 <t tx=".20200109220000.8">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -441,19 +435,18 @@ NX12 Tutorial 翻譯
 
 						
 </t>
-<t tx=".20200109220000.9">## 圖層
-
-* 工作
-
-* 可選
-
-* 僅可見
-
-* 不可見
-
-&lt;small&gt;
- [對應網站](https://s40723147.github.io/cad2019ag4/content/NX12.html)
-&lt;/small&gt;</t>
+<t tx=".20200109220000.9">## Batch Command
+## 啟動8444靜態
+```
+@language python
+@echo off
+y:
+cd tmp\cad2019\
+start python http-server.py | start chrome https://localhost:8444
+```
+ &lt;small&gt;
+ [對應網站](https://s40723150.github.io/cad2019/content/Batch%20Command.html)
+ &lt;/small&gt;</t>
 <t tx="leo.20180902120523.1"></t>
 <t tx="leo.20180902120523.10">## cad2019 個人簡報
 ### 40723150
